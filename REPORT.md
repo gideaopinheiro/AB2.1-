@@ -56,8 +56,8 @@ to 100%. It is important to remember that the cpu of the computer used counts on
 	
   Because the condition within the while loop in the child process (line 105) is always true, the stop condition is made inside the parent process, which monitors the behavior of the child and allows it to run for only 10 seconds. After 10 seconds, the parent process performs a system call (line 51), called kill that serves to kill a process, identified by a pid (process identification).
   
-![codigo_2]()
-![codigo_1]()
+![codigo_2](https://github.com/gideaopinheiro/AB2.1-/blob/master/static/codigo_2.png)
+![codigo_1](https://github.com/gideaopinheiro/AB2.1-/blob/master/static/codigo_1.png)
 
   If in the first second after killing the process, we reapplied CPU consumption of the process, we would see a curve as sharp as the first second, but going from some high value to zero, since a dead process does not use cpu.
   
@@ -71,7 +71,7 @@ to 100%. It is important to remember that the cpu of the computer used counts on
  
   The **usleep()** function (line 109) causes a large decrease in cpu consumption, around 90% because the infinite loop is interrupted every millisecond for memory allocation and then resumed. This shows how different the time dimension is from the point of view of the machine and the man.
 
-![codigo_2]()
+![codigo_2](https://github.com/gideaopinheiro/AB2.1-/blob/master/static/codigo_2.png)
 
   The third graph shows the memory allocation of the child process. Continuous growth occurs because the memory allocated during program execution remains allocated until the process no longer exists. If we wanted to free up space while the program was running, we could have used the [free()](http://www.cplusplus.com/reference/cstdlib/free/?kw=free) function that frees up the allocated memory space. But that was not the case.
 
@@ -110,7 +110,7 @@ ggplot(arquivo_teste, aes(x=seconds, y=ucp_usage)) + geom_line()
 ```
 
 Before plotting the other graphics, the file name must be changed within the source code for **arquivo_teste2.csv**, on the **65** line.
-![codigo_3]()
+![codigo_3](https://github.com/gideaopinheiro/AB2.1-/blob/master/static/codigo_3.png)
 
 then it must be compiled with the ```$ gcc main.c -o bin``` command and executed again with the ```$ ./bin ucp-mem``` command (on bash).
 
