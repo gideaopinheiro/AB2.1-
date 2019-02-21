@@ -48,7 +48,7 @@ char *ucpUsage(int pid) {
     return ucp_usage;
 }
 
-void killProcess(int pid){ //MATAR PROCESSO
+void killProcess(int pid){ //Kill the process 
     char comand[256];
     sprintf(comand, "kill -9 %d", pid);
     system(comand);
@@ -62,7 +62,7 @@ int main(int argc, char *argv[], char *envp[]){
     char *word;
 
     FILE *file;
-    file = fopen("arquivo_teste2.csv", "w");
+    file = fopen("arquivo_teste.csv", "w");
     fputs("ucp_usage,mem_usage\n", file);
     if(ucp == mem){
         printf("SIM\n");
@@ -100,7 +100,7 @@ int main(int argc, char *argv[], char *envp[]){
         }
         killProcess(pid);
     }
-    else{ //FILHO
+    else{ //child process
         if(strcmp(argv[1],"ucp") == 0){
             while(1);
         }
