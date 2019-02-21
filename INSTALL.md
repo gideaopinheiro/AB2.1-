@@ -1,12 +1,12 @@
 ## Compilation and Run Commands
 
-'''sh
+```sh
 $ gcc main.c -o bin
-'''
+```
  - para utilização intensa apenas da CPU
- '''sh
+ ```sh
  $ ./bin ucp
- '''
+ ```
   - para utilização intensa da CPU e Memória
 ```sh
 $ ./bin ucp-mem
