@@ -1,7 +1,11 @@
 # Report monitoring the usage of cpu and memory
 
 ## Identification
+<<<<<<< HEAD
 >  for a better view, read this report on the following link: [github](https://github.com/gideaopinheiro/AB2.1-/blob/master/REPORT.md)
+=======
+> for a better view, read this report on the following link [[github]](https://github.com/gideaopinheiro/AB2.1-/blob/master/REPORT.md)
+>>>>>>> 42bc44a7bd9bbf7662f7413439a2571371d4e29a
 
 Student 1
 - Name: Gideão Pinheiro dos Santos Silva
@@ -124,4 +128,8 @@ ggplot(arquivo_teste2, aes(x=seconds, y=ucp_usage)) +
 ```
 ggplot(arquivo_teste2, aes(x=seconds, y=mem_usage)) +
   geom_line()
+<<<<<<< HEAD
 ```
+=======
+```
+>>>>>>> 42bc44a7bd9bbf7662f7413439a2571371d4e29a
